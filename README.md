@@ -4,4 +4,4 @@ Ejemplo de landing page sencilla para un cafe.
 
 Para ejecutar localmente:
 
-´npm run dev´
+**npm run dev**
