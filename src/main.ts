@@ -69,7 +69,7 @@ revealEls.forEach(el => el.classList.add('reveal'))
 
 const observer = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry, _i) => {
       if (entry.isIntersecting) {
         const el = entry.target as HTMLElement
         // stagger effect for cards
