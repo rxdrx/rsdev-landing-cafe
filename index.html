@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tierra Café — Café de especialidad, pastelería artesanal y blends únicos en el corazón de la ciudad. Pedí por WhatsApp y viví la experiencia." />
+    <meta name="theme-color" content="#1a0f07" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <title>Tierra Café — Especialidad & Pastelería Artesanal</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+      <a href="#hero" class="nav__logo" id="nav-logo">Tierra Café</a>
+      <ul class="nav__links" role="list">
+        <li><a href="#menu" class="nav__link" id="nav-menu">Menú</a></li>
+        <li><a href="#resenas" class="nav__link" id="nav-reviews">Reseñas</a></li>
+        <li><a href="#nosotros" class="nav__link" id="nav-about">Nosotros</a></li>
+        <li>
+          <a
+            href="https://wa.me/5491100000000?text=Hola!%20Quiero%20hacer%20un%20pedido%20🙌"
+            id="nav-cta"
+            class="btn btn--primary btn--sm"
+            target="_blank"
+            rel="noopener"
+          >Reserva tu lugar</a>
+        </li>
+      </ul>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="nav__mobile" id="nav-mobile" role="dialog" aria-label="Menú móvil">
+      <ul role="list">
+        <li><a href="#menu" class="nav__link" id="mob-menu">Menú</a></li>
+        <li><a href="#resenas" class="nav__link" id="mob-reviews">Reseñas</a></li>
+        <li><a href="#nosotros" class="nav__link" id="mob-about">Nosotros</a></li>
+        <li>
+          <a
+            href="https://wa.me/5491100000000?text=Hola!%20Quiero%20hacer%20un%20pedido%20🙌"
+            id="mob-cta"
+            class="btn btn--primary"
+            target="_blank"
+            rel="noopener"
+          >Reserva tu lugar</a>
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <!-- 1. HERO -->
+      <section class="hero" id="hero" aria-label="Bienvenida">
+        <div class="hero__bg">
+          <img src="/images/hero.jpg" alt="Interior cálido de Tierra Café con café latte art" class="hero__img" fetchpriority="high" />
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__content container">
+          <span class="hero__badge" id="hero-badge">Café de Especialidad</span>
+          <h1 class="hero__title" id="hero-title">
+            El café que siempre<br />
+            <em>soñaste tomar</em>
+          </h1>
+          <p class="hero__subtitle" id="hero-subtitle">
+            Blends únicos de origen único, pastelería artesanal hecha hoy<br />
+            y un espacio donde cada sorbo cuenta.
+          </p>
+          <div class="hero__actions">
+            <a href="#menu" id="hero-cta-secondary" class="btn btn--ghost btn--lg">Ver el Menú ↓</a>
+          </div>
+        </div>
+        <div class="hero__scroll-indicator" aria-hidden="true">
+          <span></span>
+        </div>
+      </section>
+
+      <!-- 2. MENÚ -->
+      <section class="menu section" id="menu" aria-labelledby="menu-heading">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__label">Nuestros favoritos</span>
+            <h2 class="section__title" id="menu-heading">Lo que vas a amar</h2>
+            <p class="section__desc">Cada preparación es un ritual. Ingredientes de primera, técnica impecable.</p>
+          </div>
+
+          <div class="tabs" id="menu-tabs" role="tablist" aria-label="Categorías del menú">
+            <button class="tab tab--active" id="tab-cafes" role="tab" aria-selected="true" aria-controls="panel-cafes" data-tab="cafes">Cafés</button>
+            <button class="tab" id="tab-blends" role="tab" aria-selected="false" aria-controls="panel-blends" data-tab="blends">Blends</button>
+            <button class="tab" id="tab-dulces" role="tab" aria-selected="false" aria-controls="panel-dulces" data-tab="dulces">Dulces</button>
+            <button class="tab" id="tab-salados" role="tab" aria-selected="false" aria-controls="panel-salados" data-tab="salados">Salados</button>
+          </div>
+
+          <div class="menu__panels">
+            <!-- Cafés -->
+            <div class="menu__panel" id="panel-cafes" role="tabpanel" aria-labelledby="tab-cafes">
+              <div class="cards">
+                <article class="card" id="card-espresso">
+                  <div class="card__img-wrap">
+                    <img src="/images/espresso.jpg" alt="Espresso doble en taza cerámica" class="card__img" loading="lazy" />
+                    <span class="card__badge">Popular</span>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Espresso Doble</h3>
+                    <p class="card__desc">Origen único Etiopía Yirgacheffe. Notas de berries, chocolate negro y cítrico final.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$1.500</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20un%20Espresso%20Doble%20🔥" class="card__order" id="order-espresso" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="card" id="card-cappuccino">
+                  <div class="card__img-wrap">
+                    <img src="/images/cappuccino.jpg" alt="Cappuccino con latte art rosetta" class="card__img" loading="lazy" />
+                    <span class="card__badge card__badge--new">Nuevo</span>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Cappuccino Artesanal</h3>
+                    <p class="card__desc">Leche entera vaporizada a 65°C, crema densa y espuma sedosa con rosetta dibujada a mano.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$1.800</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20un%20Cappuccino%20Artesanal%20☕" class="card__order" id="order-cappuccino" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="card" id="card-flatwhite">
+                  <div class="card__img-wrap">
+                    <div class="card__img card__img--placeholder" aria-label="Flat White">
+                      <span class="card__placeholder-text">Flat White</span>
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Flat White</h3>
+                    <p class="card__desc">Doble ristretto cubierto con micro-espuma aterciopelada. Intenso, cremoso, perfecto.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$1.900</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20un%20Flat%20White%20✨" class="card__order" id="order-flatwhite" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Blends -->
+            <div class="menu__panel menu__panel--hidden" id="panel-blends" role="tabpanel" aria-labelledby="tab-blends">
+              <div class="cards">
+                <article class="card" id="card-blend-oscuro">
+                  <div class="card__img-wrap">
+                    <div class="card__img card__img--placeholder" aria-label="Blend Oscuro">
+                      <span class="card__placeholder-text">Blend Oscuro</span>
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Blend Oscuro Tierra</h3>
+                    <p class="card__desc">Brasil + Colombia. Chocolate amargo, nuez moscada y un final largo y profundo.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$1.600</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20el%20Blend%20Oscuro%20Tierra%20🌑" class="card__order" id="order-blend-oscuro" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="card" id="card-blend-floral">
+                  <div class="card__img-wrap">
+                    <div class="card__img card__img--placeholder" aria-label="Blend Floral">
+                      <span class="card__placeholder-text">Blend Floral</span>
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Blend Floral Primavera</h3>
+                    <p class="card__desc">Etiopía + Kenia. Jazmín, durazno blanco y acidez brillante. Ideal en V60.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$1.700</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20el%20Blend%20Floral%20🌸" class="card__order" id="order-blend-floral" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="card" id="card-cold-brew">
+                  <div class="card__img-wrap">
+                    <div class="card__img card__img--placeholder" aria-label="Cold Brew">
+                      <span class="card__placeholder-text">Cold Brew</span>
+                    </div>
+                    <span class="card__badge">Verano</span>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Cold Brew 24h</h3>
+                    <p class="card__desc">Macerado en frío por 24 horas. Suave, concentrado, sin acidez. Con leche de avena.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$2.100</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20el%20Cold%20Brew%20🧊" class="card__order" id="order-cold-brew" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Dulces -->
+            <div class="menu__panel menu__panel--hidden" id="panel-dulces" role="tabpanel" aria-labelledby="tab-dulces">
+              <div class="cards">
+                <article class="card" id="card-croissant">
+                  <div class="card__img-wrap">
+                    <img src="/images/croissant.jpg" alt="Croissant artesanal dorado y hojaldrado" class="card__img" loading="lazy" />
+                    <span class="card__badge">Hecho hoy</span>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Croissant Artesanal</h3>
+                    <p class="card__desc">128 capas de manteca francesa. Crocante por fuera, suave y húmedo por dentro.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$1.200</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20un%20Croissant%20🥐" class="card__order" id="order-croissant" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="card" id="card-brownie">
+                  <div class="card__img-wrap">
+                    <div class="card__img card__img--placeholder" aria-label="Brownie">
+                      <span class="card__placeholder-text">Brownie</span>
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Brownie de Cacao 70%</h3>
+                    <p class="card__desc">Cacao belga de especialidad, nueces tostadas y sal marina. Húmedo, denso e irresistible.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$1.400</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20un%20Brownie%20🍫" class="card__order" id="order-brownie" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="card" id="card-cookie">
+                  <div class="card__img-wrap">
+                    <div class="card__img card__img--placeholder" aria-label="Cookie">
+                      <span class="card__placeholder-text">Cookie</span>
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Cookie Choco & Sal</h3>
+                    <p class="card__desc">Bordes crocantes, centro suave. Chispas de chocolate amargo y fleur de sel.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$900</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20una%20Cookie%20🍪" class="card__order" id="order-cookie" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Salados -->
+            <div class="menu__panel menu__panel--hidden" id="panel-salados" role="tabpanel" aria-labelledby="tab-salados">
+              <div class="cards">
+                <article class="card" id="card-avocado">
+                  <div class="card__img-wrap">
+                    <div class="card__img card__img--placeholder" aria-label="Tostada de palta">
+                      <span class="card__placeholder-text">Tostada de Palta</span>
+                    </div>
+                    <span class="card__badge card__badge--new">Nuevo</span>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Tostada de Palta</h3>
+                    <p class="card__desc">Pan de masa madre artesanal, palta premium, huevo pochado, ají molido y oliva virgen.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$2.400</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20la%20Tostada%20de%20Palta%20🥑" class="card__order" id="order-avocado" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="card" id="card-tostado">
+                  <div class="card__img-wrap">
+                    <div class="card__img card__img--placeholder" aria-label="Tostado jamón y queso">
+                      <span class="card__placeholder-text">Tostado Premium</span>
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Tostado Premium</h3>
+                    <p class="card__desc">Jamón cocido, queso gruyère, rúcula y mostaza dijon en pan brioche tostado a la plancha.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$2.200</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20el%20Tostado%20Premium%20🧀" class="card__order" id="order-tostado" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+                <article class="card" id="card-quiche">
+                  <div class="card__img-wrap">
+                    <div class="card__img card__img--placeholder" aria-label="Quiche del día">
+                      <span class="card__placeholder-text">Quiche del Día</span>
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <h3 class="card__title">Quiche del Día</h3>
+                    <p class="card__desc">Masa casera, relleno rotativo según la estación. Preguntá por el sabor de hoy.</p>
+                    <div class="card__footer">
+                      <span class="card__price">$2.000</span>
+                      <a href="https://wa.me/5491100000000?text=Quiero%20saber%20el%20sabor%20de%20la%20Quiche%20hoy%20🥧" class="card__order" id="order-quiche" target="_blank" rel="noopener">Pedir</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. RESEÑAS -->
+      <section class="reviews section" id="resenas" aria-labelledby="reviews-heading">
+        <div class="reviews__bg-pattern" aria-hidden="true"></div>
+        <div class="container">
+          <div class="section__header">
+            <span class="section__label">Lo que dicen</span>
+            <h2 class="section__title" id="reviews-heading">Clientes que vuelven siempre</h2>
+          </div>
+          <div class="reviews__grid">
+            <article class="review-card" id="review-1">
+              <div class="review-card__stars" aria-label="5 estrellas">★★★★★</div>
+              <blockquote class="review-card__quote">
+                "El espresso es simplemente el mejor que tomé en la ciudad. Vine por primera vez un martes y desde entonces vengo todos los días. El ambiente te abraza."
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">M</div>
+                <div>
+                  <cite class="review-card__name">Martina R.</cite>
+                  <span class="review-card__date">Cliente habitual · hace 2 semanas</span>
+                </div>
+              </footer>
+            </article>
+            <article class="review-card review-card--featured" id="review-2">
+              <div class="review-card__stars" aria-label="5 estrellas">★★★★★</div>
+              <blockquote class="review-card__quote">
+                "El croissant es una obra de arte. Lo pido con el cappuccino y literalmente me hace feliz la mañana. Son muy atentos y la música es perfecta."
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar review-card__avatar--b" aria-hidden="true">J</div>
+                <div>
+                  <cite class="review-card__name">Julián T.</cite>
+                  <span class="review-card__date">Cliente habitual · hace 1 semana</span>
+                </div>
+              </footer>
+            </article>
+            <article class="review-card" id="review-3">
+              <div class="review-card__stars" aria-label="5 estrellas">★★★★★</div>
+              <blockquote class="review-card__quote">
+                "Pedí por WhatsApp y me llegó en 20 minutos perfectamente empaquetado. El cold brew está increíble. ¡Ya es parte de mi rutina semanal!"
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar review-card__avatar--c" aria-hidden="true">S</div>
+                <div>
+                  <cite class="review-card__name">Sofía G.</cite>
+                  <span class="review-card__date">Cliente habitual · hace 3 días</span>
+                </div>
+              </footer>
+            </article>
+            <article class="review-card" id="review-4">
+              <div class="review-card__stars" aria-label="5 estrellas">★★★★★</div>
+              <blockquote class="review-card__quote">
+                "Trabajo desde acá los viernes. El wifi es bueno, hay enchufes y nunca nadie te apura. El brownie con el flat white es mi combo favorito."
+              </blockquote>
+              <footer class="review-card__author">
+                <div class="review-card__avatar review-card__avatar--d" aria-hidden="true">F</div>
+                <div>
+                  <cite class="review-card__name">Federico M.</cite>
+                  <span class="review-card__date">Cliente habitual · hace 5 días</span>
+                </div>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SOBRE NOSOTROS -->
+      <section class="about section" id="nosotros" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="about__grid">
+            <div class="about__img-wrap">
+              <img src="/images/about.jpg" alt="Interior del local Tierra Café con barista trabajando" class="about__img" loading="lazy" />
+              <div class="about__img-badge" id="about-badge">
+                <span class="about__img-badge-number">2018</span>
+                <span class="about__img-badge-text">Desde</span>
+              </div>
+            </div>
+            <div class="about__content">
+              <span class="section__label">Nuestra historia</span>
+              <h2 class="section__title" id="about-heading">Un local con alma</h2>
+              <p class="about__text">
+                Todo empezó con una pregunta simple: <strong>¿por qué el café de todos los días no puede ser extraordinario?</strong>
+              </p>
+              <p class="about__text">
+                En 2018 abrimos Tierra Café con una máquina prestada, unas pocas mesas de madera y una obsesión por el origen del grano. Hoy trabajamos directamente con productores de Etiopía, Colombia y Brasil, tostamos nuestros propios blends y horneamos todo lo que está en el mostrador esa misma mañana.
+              </p>
+              <p class="about__text">
+                Creemos que un buen café no es un lujo — es un ritual diario que merece cuidado, técnica y amor.
+              </p>
+              <div class="about__stats">
+                <div class="about__stat" id="stat-origins">
+                  <span class="about__stat-number">3</span>
+                  <span class="about__stat-label">Orígenes de grano</span>
+                </div>
+                <div class="about__stat" id="stat-years">
+                  <span class="about__stat-number">6+</span>
+                  <span class="about__stat-label">Años de pasión</span>
+                </div>
+                <div class="about__stat" id="stat-cups">
+                  <span class="about__stat-number">50k</span>
+                  <span class="about__stat-label">Tazas servidas</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 5. FOOTER -->
+    <footer class="footer" id="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="#hero" class="footer__logo" id="footer-logo">Tierra Café</a>
+            <p class="footer__tagline">Café de especialidad &amp; pastelería artesanal.</p>
+            <div class="footer__social" aria-label="Redes sociales">
+              <a href="https://instagram.com/tierracafe" id="social-ig" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="https://tiktok.com/@tierracafe" id="social-tt" class="footer__social-link" target="_blank" rel="noopener" aria-label="TikTok">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.27 8.27 0 004.84 1.55V6.87a4.85 4.85 0 01-1.07-.18z"/></svg>
+              </a>
+              <a href="https://wa.me/5491100000000" id="social-wa" class="footer__social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__info">
+            <h3 class="footer__heading">Horarios</h3>
+            <ul class="footer__list" role="list">
+              <li><span>Lun – Vie</span><span>07:00 – 20:00</span></li>
+              <li><span>Sábados</span><span>08:00 – 21:00</span></li>
+              <li><span>Domingos</span><span>09:00 – 18:00</span></li>
+            </ul>
+          </div>
+
+          <div class="footer__info">
+            <h3 class="footer__heading">Ubicación</h3>
+            <p class="footer__address">Av. Santa Fe 1234,<br />Palermo, Buenos Aires</p>
+            <a
+              href="https://www.google.com/maps/search/Av.+Santa+Fe+1234+Palermo+Buenos+Aires"
+              id="footer-maps"
+              class="footer__map-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ver en Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2024 Tierra Café. Hecho con pasión y mucho amor.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a
+      href="https://wa.me/5491100000000?text=Hola!%20Quiero%20hacer%20un%20pedido%20🙌"
+      id="whatsapp-fab"
+      class="whatsapp-fab"
+      target="_blank"
+      rel="noopener"
+      aria-label="Contactar por WhatsApp"
+    >
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span class="whatsapp-fab__tooltip">Reserva tu lugar</span>
+      <span class="whatsapp-fab__pulse" aria-hidden="true"></span>
+    </a>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
